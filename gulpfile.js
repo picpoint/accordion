@@ -11,33 +11,44 @@ const settings = {
 	destcss: './dist/css/'
 };
 
-/*
+
 gulp.task('preproc', function () {
-	gulp.src(settings.root + settings.srcless)
+	gulp.src('./src/less/*.less')
 	.pipe(less())
-	.pipe(gulp.dest(settings.destcss))
+	.pipe(gulp.dest('./dist/css'))
 	.pipe(browserSync.reload({
 		stream: true
 	}));
 });
-*/
 
+gulp.task('html', function () {
+	gulp.src('./dist/*.html')
+	 .pipe(gulp.dest('./dist'))
+	 .pipe(browserSync.reload({
+		 stream: true
+	 }));
+});
 
+/*
 gulp.task('css', function () {
-	gulp.src('./src/*.less')
+	gulp.src('./src/less/*.less')
 		.pipe(less())
 		.pipe(gulp.dest('./dist/css/'))
 		.pipe(browserSync.reload({
 			stream: true
 		}));
 });
+*/
 
-gulp.task('watch', ['css', 'browserSync'], function () {
-	gulp.watch('./dist', ['css']);
+gulp.task('watch', ['preproc', 'browserSync'], function () {
+	gulp.watch('./src/less/*.less', ['preproc']);
+	gulp.watch('./dist/*.html', ['html']);
 });
 
 gulp.task('browserSync', function () {
 	browserSync.init({
-		baseDir: settings.root
+		server: {
+			baseDir: './dist'
+		}
 	});
 });
