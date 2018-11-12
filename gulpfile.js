@@ -29,16 +29,6 @@ gulp.task('html', function () {
 	 }));
 });
 
-/*
-gulp.task('css', function () {
-	gulp.src('./src/less/*.less')
-		.pipe(less())
-		.pipe(gulp.dest('./dist/css/'))
-		.pipe(browserSync.reload({
-			stream: true
-		}));
-});
-*/
 
 gulp.task('watch', ['preproc', 'browserSync'], function () {
 	gulp.watch('./src/less/*.less', ['preproc']);

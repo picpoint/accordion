@@ -1,5 +1,120 @@
-@bc: #beb1ff;
+@brd: 1px solid red;
+@darkgray: #686765;
+@lightgray: #e7e7e7;
+@colororange: #fe8663;
 
-body {
-	background-color: @bc;
+/*
+@fontface: {
+	font-family: 'Play-Regular', sans-serif;
+	src: url(/fonts/Play-Regular.ttf);
+}
+*/
+
+
+.spacebetween {
+	display: flex;
+	justify-content: space-between;
+}
+
+.wrapper {
+	//font-family: @fontface;
+	border: @brd;
+	display: flex;
+	justify-content: center;
+		&-block {
+			border: @brd;
+			//height: 250px;
+			width: 50%;
+				&-logo {
+					//border: @brd;
+					display: flex;
+					justify-content: center;
+					margin-bottom: 15px;
+						img {
+							height: 40px;
+						}
+				}
+				&-items {
+					//border: @brd;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+						&-item {
+							//border: @brd;
+							margin: 2px;
+							width: 55%;
+							font-size: 1rem;
+							padding: 10px;
+							border-radius: 25px;
+								&:nth-child(odd) {
+									background-color: @darkgray;
+									color: @lightgray
+								}
+								&:nth-child(even) {
+									background-color: @lightgray;
+									color: @darkgray;
+								}
+								/*
+								&:hover {
+									background-color: @colororange;
+								}
+								*/
+								&-base {
+									.spacebetween();
+									img {
+										height: 12px;
+										cursor: pointer;
+									}
+								}
+								&-functions {
+									.spacebetween();
+									img {
+										height: 12px;
+										cursor: pointer;
+									}
+								}
+								&-error {
+									.spacebetween();
+									img {
+										height: 12px;
+										cursor: pointer;
+									}
+								}
+								&-objects {
+									.spacebetween();
+									img {
+										height: 12px;
+										cursor: pointer;
+									}
+								}
+								&-events {
+									.spacebetween();
+									img {
+										height: 12px;
+										cursor: pointer;
+									}
+								}
+						}
+						&-basedescribe {
+							border: @brd;
+							width: 57%;
+							background-color: @lightgray;
+							color: @darkgray;
+							padding-top: 25px;
+							margin-top: -20px;
+							z-index: -1;
+							border-bottom-left-radius: 20px;
+							border-bottom-right-radius: 20px;
+							//display: none;
+								span {
+									display: flex;
+									flex-direction: column;
+									padding: 5px 0 5px 15px;
+								}
+						}
+					.show {
+						display: none;
+					}
+				}
+		}
 }

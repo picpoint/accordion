@@ -1,3 +1,111 @@
-body {
-  background-color: #beb1ff;
+/*
+@fontface: {
+	font-family: 'Play-Regular', sans-serif;
+	src: url(/fonts/Play-Regular.ttf);
+}
+*/
+.spacebetween {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+}
+.wrapper-block {
+  border: 1px solid red;
+  width: 50%;
+}
+.wrapper-block-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.wrapper-block-logo img {
+  height: 40px;
+}
+.wrapper-block-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper-block-items-item {
+  margin: 2px;
+  width: 55%;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 25px;
+  /*
+								&:hover {
+									background-color: @colororange;
+								}
+								*/
+}
+.wrapper-block-items-item:nth-child(odd) {
+  background-color: #686765;
+  color: #e7e7e7;
+}
+.wrapper-block-items-item:nth-child(even) {
+  background-color: #e7e7e7;
+  color: #686765;
+}
+.wrapper-block-items-item-base {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper-block-items-item-base img {
+  height: 12px;
+  cursor: pointer;
+}
+.wrapper-block-items-item-functions {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper-block-items-item-functions img {
+  height: 12px;
+  cursor: pointer;
+}
+.wrapper-block-items-item-error {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper-block-items-item-error img {
+  height: 12px;
+  cursor: pointer;
+}
+.wrapper-block-items-item-objects {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper-block-items-item-objects img {
+  height: 12px;
+  cursor: pointer;
+}
+.wrapper-block-items-item-events {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper-block-items-item-events img {
+  height: 12px;
+  cursor: pointer;
+}
+.wrapper-block-items-basedescribe {
+  border: 1px solid red;
+  width: 57%;
+  background-color: #e7e7e7;
+  color: #686765;
+  padding-top: 25px;
+  margin-top: -20px;
+  z-index: -1;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.wrapper-block-items-basedescribe span {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0 5px 15px;
+}
+.wrapper-block-items .show {
+  display: none;
 }
