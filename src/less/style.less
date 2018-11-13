@@ -16,13 +16,34 @@
 	justify-content: space-between;
 }
 
+.addBlock {
+	//border: @brd;
+	width: 57%;
+	background-color: @lightgray;
+	color: @darkgray;
+	padding-top: 25px;
+	margin-top: -20px;
+	z-index: -1;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	display: none;
+	transition: ease-out 0.5s;
+	span {
+		display: flex;
+		flex-direction: column;
+		padding: 5px 0 5px 15px;
+	}
+}
+
+
+
 .wrapper {
 	//font-family: @fontface;
-	border: @brd;
+	//border: @brd;
 	display: flex;
 	justify-content: center;
 		&-block {
-			border: @brd;
+			//border: @brd;
 			//height: 250px;
 			width: 50%;
 				&-logo {
@@ -46,19 +67,31 @@
 							font-size: 1rem;
 							padding: 10px;
 							border-radius: 25px;
-								&:nth-child(odd) {
+								&:nth-child(1) {
 									background-color: @darkgray;
-									color: @lightgray
+									color: white;
+									font-weight: bold;
 								}
-								&:nth-child(even) {
+								&:nth-child(3) {
 									background-color: @lightgray;
 									color: @darkgray;
+									font-weight: bold;
 								}
-								/*
-								&:hover {
-									background-color: @colororange;
+								&:nth-child(5) {
+									background-color: @darkgray;
+									color: white;
+									font-weight: bold;
 								}
-								*/
+								&:nth-child(7) {
+									background-color: @lightgray;
+									color: @darkgray;
+									font-weight: bold;
+								}
+								&:nth-child(9) {
+									background-color: @darkgray;
+									color: white;
+									font-weight: bold;
+								}
 								&-base {
 									.spacebetween();
 									img {
@@ -96,24 +129,24 @@
 								}
 						}
 						&-basedescribe {
-							border: @brd;
-							width: 57%;
-							background-color: @lightgray;
-							color: @darkgray;
-							padding-top: 25px;
-							margin-top: -20px;
-							z-index: -1;
-							border-bottom-left-radius: 20px;
-							border-bottom-right-radius: 20px;
-							//display: none;
-								span {
-									display: flex;
-									flex-direction: column;
-									padding: 5px 0 5px 15px;
-								}
+							.addBlock();
+							transition: ease-out 0.5s;
+						}
+						&-funcdescribe {
+							.addBlock();
+						}
+						&-errdescribe {
+							.addBlock();
+						}
+						&-objdescribe {
+							.addBlock();
+						}
+						&-eventdescribe {
+							.addBlock();
 						}
 					.show {
-						display: none;
+						display: block;
+						transition: ease-out 0.5s;
 					}
 				}
 		}
