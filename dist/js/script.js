@@ -1,3 +1,4 @@
+/*
 function showBase() {
 	var block = document.getElementById('bd');
 	block.classList.toggle('show');
@@ -22,3 +23,26 @@ function showEvent() {
 	var block = document.getElementById('event');
 	block.classList.toggle('show');
 }
+*/
+
+
+var img = document.getElementById('pict');
+var trnglup = document.getElementById('pict');
+var basedesc = document.getElementById('basedesc');
+
+img.addEventListener('click', function () {
+		basedesc.classList.toggle('show');
+
+		if (img.hasAttribute('src', 'pict/triangle_up.png')) {
+			img.setAttribute('src', 'pict/triangle_down.png');
+		}
+
+		if (img.hasAttribute('src', 'pict/triangle_down.png')) {
+			img.setAttribute('src', 'pict/triangle_up.png');
+		}
+
+
+
+});
+
+

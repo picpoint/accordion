@@ -8,6 +8,10 @@
   display: flex;
   justify-content: space-between;
 }
+.trnglup {
+  background: url('/pict/triangle_up.png');
+  z-index: 1;
+}
 .addBlock {
   width: 57%;
   background-color: #e7e7e7;
@@ -18,7 +22,6 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   display: none;
-  transition: ease-out 0.5s;
 }
 .addBlock span {
   display: flex;
@@ -127,7 +130,6 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   display: none;
-  transition: ease-out 0.5s;
 }
 .wrapper-block-items-basedescribe span {
   display: flex;
@@ -144,7 +146,6 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   display: none;
-  transition: ease-out 0.5s;
 }
 .wrapper-block-items-funcdescribe span {
   display: flex;
@@ -161,7 +162,6 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   display: none;
-  transition: ease-out 0.5s;
 }
 .wrapper-block-items-errdescribe span {
   display: flex;
@@ -178,7 +178,6 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   display: none;
-  transition: ease-out 0.5s;
 }
 .wrapper-block-items-objdescribe span {
   display: flex;
@@ -195,7 +194,6 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   display: none;
-  transition: ease-out 0.5s;
 }
 .wrapper-block-items-eventdescribe span {
   display: flex;
@@ -204,5 +202,8 @@
 }
 .wrapper-block-items .show {
   display: block;
-  transition: ease-out 0.5s;
+}
+.wrapper-block-items .trnglup {
+  background: url("./pict/triangle_up.png");
+  z-index: 1;
 }
