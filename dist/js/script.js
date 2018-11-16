@@ -30,18 +30,17 @@ var img = document.getElementById('pict');
 var trnglup = document.getElementById('pict');
 var basedesc = document.getElementById('basedesc');
 
+
 img.addEventListener('click', function () {
 		basedesc.classList.toggle('show');
 
-		if (img.hasAttribute('src', 'pict/triangle_up.png')) {
-			img.setAttribute('src', 'pict/triangle_down.png');
+		if (img.getAttribute('src') === 'pict/triangle_up.png') {
+			return img.setAttribute('src', 'pict/triangle_down.png');
 		}
 
-		if (img.hasAttribute('src', 'pict/triangle_down.png')) {
-			img.setAttribute('src', 'pict/triangle_up.png');
+		if (img.getAttribute('src') === 'pict/triangle_down.png') {
+			return img.setAttribute('src', 'pict/triangle_up.png');
 		}
-
-
 
 });
 
